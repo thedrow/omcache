@@ -1,6 +1,9 @@
 language: c
 compiler: gcc
 
+services:
+  - memcached
+
 script: make -f .travis.mk
 
 os:
