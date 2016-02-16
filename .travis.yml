@@ -1,3 +1,6 @@
+sudo: false
+cache: ccache
+
 script: make -f .travis.mk
 
 matrix:
@@ -12,6 +15,16 @@ matrix:
       env: CC=gcc
     - os: linux
       language: python
+      python: "2.6"
+      compiler: clang
+      env: CC=clang
+    - os: linux
+      language: python
+      python: "2.7"
+      compiler: gcc
+      env: CC=gcc      
+    - os: linux
+      language: python
       python: "2.7"
       compiler: clang
       env: CC=clang
@@ -22,9 +35,34 @@ matrix:
       env: CC=gcc
     - os: linux
       language: python
+      python: "3.3"
+      compiler: clang
+      env: CC=clang
+    - os: linux
+      language: python
+      python: "3.4"
+      compiler: gcc
+      env: CC=gcc      
+    - os: linux
+      language: python
       python: "3.4"
       compiler: clang
       env: CC=clang
+    - os: linux
+      language: python
+      python: "3.5"
+      compiler: gcc
+      env: CC=gcc      
+    - os: linux
+      language: python
+      python: "3.5"
+      compiler: clang
+      env: CC=clang
+    - os: linux
+      language: python
+      python: "pypy"
+      compiler: gcc
+      env: CC=gcc      
     - os: linux
       language: python
       python: "pypy"
