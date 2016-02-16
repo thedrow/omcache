@@ -1,8 +1,6 @@
 all: $(shell uname -s)
 
 Linux:
-	sudo apt-get update
-	sudo apt-get install libasyncns-dev check memcached valgrind
 	pip install cffi pytest pylint
 	$(MAKE) all
 	# We don't need to run C unit tests under valgrind for every python
