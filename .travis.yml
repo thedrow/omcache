@@ -94,3 +94,10 @@ matrix:
         - eval "$(pyenv init -)"
         - pyenv install pypy-4.0.1
         - pyenv global pypy-4.0.1    
+addons:
+  apt:
+    packages:
+      - libasyncns-dev
+      - check
+      - memcached
+      - valgrind
