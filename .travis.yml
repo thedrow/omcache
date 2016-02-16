@@ -1,4 +1,6 @@
 script: make -f .travis.mk
+sudo: required
+dist: trusty
 
 matrix:
   include:
